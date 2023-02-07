@@ -1,0 +1,91 @@
+@function changeColor($type, $color) {
+
+    //função para escurecer, clarear ou inverter a cor
+    @if $type ==light {
+        $newColor: lighten($color, 10%);
+        @return $newColor;
+    }
+
+    @else if $type ==dark {
+        $newColor: darken($color, 30%);
+        @return $newColor;
+    }
+
+    @else if $type ==comp {
+        $newColor: complement($color);
+        @return $newColor;
+    }
+
+    @else {
+        $newColor: $color;
+        @return $newColor;
+    }
+}
+
+@mixin card($bgcolor, $txtcolor, $icon, $badge) {
+    width: 20%;
+    display: table;
+    background-color: $bgcolor;
+    background-image: url($icon);
+    background-size: 20%;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    margin-right: 32px;
+    margin-top: 32px;
+    height: 230px;
+    padding: 32px;
+    color: $txtcolor;
+    position: relative;
+    transition: all 0.2s ease-in;
+
+    &:after {
+        content: 'status: ' + $badge;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background-color: black;
+        color: #fff;
+        padding: 6px;
+        padding: 6px 10px;
+        border-radius: 3px;
+    }
+
+    &:hover {
+        background-color: changeColor(light, $bgcolor);
+    }
+}
+
+@mixin btn-large($height: 60px, $fontsize: 28px) {
+    height: $height;
+    font-size: $fontsize;
+}
+
+@mixin btn($bgcolor, $txtcolor ) {
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    background-color: $bgcolor;
+    color: $txtcolor;
+    padding: 8px 32px;
+    font-size: 16px;
+}
+
+
+.card-positive {
+    //              Aplicando a função
+    @include card(changeColor(comp, #04e404), black, 'img/up.png', 'Opa');
+}
+
+.card-negative {
+    @include card(#cc0606, black, 'img/down.png', 'Bão');
+}
+
+.btn {
+    @include btn(black, white);
+}
+
+.btn-large {
+    @include btn(black, white);
+    @include btn-large();
+}
