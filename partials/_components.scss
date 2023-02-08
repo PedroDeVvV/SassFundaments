@@ -1,3 +1,5 @@
+$tema: inverno;
+
 @function changeColor($type, $color) {
 
     //função para escurecer, clarear ou inverter a cor
@@ -73,12 +75,21 @@
 
 
 .card-positive {
+    @if $tema ==inverno {
+        @include card(changeColor(light, #03f7d6), black, 'img/up.png', 'Opa');
+    }
+
+    @else {
+        @include card(changeColor(comp, #04e404), black, 'img/up.png', 'Opa');
+
+    }
+
     //              Aplicando a função
-    @include card(changeColor(comp, #04e404), black, 'img/up.png', 'Opa');
 }
 
 .card-negative {
-    @include card(#cc0606, black, 'img/down.png', 'Bão');
+    // @include card(#cc0606, black, 'img/down.png', 'Bão'); //incluindo o mixin na div
+    @include card(changeColor(comp, #09ff67), black, 'img/up.png', 'Opa');
 }
 
 .btn {
