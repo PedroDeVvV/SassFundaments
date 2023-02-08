@@ -76,11 +76,11 @@ $tema: inverno;
 
 .card-positive {
     @if $tema ==inverno {
-        @include card(changeColor(light, #03f7d6), black, 'img/up.png', 'Opa');
+        @include card(changeColor(light, #03f7d6), black, './img/down.png', 'Opa');
     }
 
     @else {
-        @include card(changeColor(comp, #04e404), black, 'img/up.png', 'Opa');
+        @include card(changeColor(comp, #04e404), black, './img/up.png', 'Opa');
 
     }
 

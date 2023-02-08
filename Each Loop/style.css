@@ -1,0 +1,59 @@
+.icon-youtube {
+  background-image: url("img/youtube.svg");
+}
+
+.icon-twitter {
+  background-image: url("img/twitter.svg");
+}
+
+.icon-facebook {
+  background-image: url("img/facebook.svg");
+}
+
+.icon-linkedin {
+  background-image: url("img/linkedin.svg");
+}
+
+.icon-youtube {
+  background-image: url("img/youtube.svg");
+  background-color: red;
+}
+
+.icon-twitter {
+  background-image: url("img/twitter.svg");
+  background-color: skyblue;
+}
+
+.icon-facebook {
+  background-image: url("img/facebook.svg");
+  background-color: royalblue;
+}
+
+.icon-linkedin {
+  background-image: url("img/linkedin.svg");
+  background-color: steelblue;
+}
+
+.icon-youtube {
+  background-image: url("img/youtube.svg");
+  background-color: red;
+  font-size: 64px;
+}
+
+.icon-twitter {
+  background-image: url("img/twitter.svg");
+  background-color: skyblue;
+  font-size: 64px;
+}
+
+.icon-facebook {
+  background-image: url("img/facebook.svg");
+  background-color: royalblue;
+  font-size: 64px;
+}
+
+.icon-linkedin {
+  background-image: url("img/linkedin.svg");
+  background-color: steelblue;
+  font-size: 64px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,16 @@
+@import './theme';
+
+ul {
+    list-style: none;
+    width: 100%;
+
+    li {
+        display: block;
+        background-color: $primary-color;
+        border-bottom: $spacer-1;
+    }
+
+    a {
+        color: red;
+    }
+}

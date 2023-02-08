@@ -1,0 +1,42 @@
+//                                                                              Each Loop 
+//Método 1
+$networks: youtube, twitter, facebook, linkedin;
+
+@each $icon in $networks {
+    .icon-#{$icon} {
+        background-image: url('img/#{$icon}.svg');
+    }
+}
+
+
+// Método 2 - usando como se fosse um objeto
+$networks2: (
+    youtube: red,
+    twitter:skyblue,
+    facebook:royalblue,
+    linkedin:steelblue
+);
+
+@each $key, $value in $networks2 {
+    .icon-#{$key} {
+        background-image: url('img/#{$key}.svg');
+        background-color: $value;
+    }
+}
+
+
+//Método 3 -desestruturação
+$networks3: 
+    youtube red 64px,
+    twitter skyblue 64px,
+    facebook royalblue 64px,
+    linkedin steelblue 64px;
+
+//similar ao for of no javascript
+@each $name, $color, $size in $networks3 {
+    .icon-#{$name} {
+        background-image: url('img/#{$name}.svg');
+        background-color: $color;
+        font-size: $size;
+    }
+}

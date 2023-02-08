@@ -1,0 +1,39 @@
+@charset "UTF-8";
+ul {
+  list-style: none;
+  width: 100%;
+}
+ul li {
+  display: block;
+  background-color: red;
+  border-bottom: 8px;
+}
+ul a {
+  color: red;
+}
+
+@media screen and (min-width: 360px) {
+  nav {
+    width: 100vw;
+    height: 80px;
+  }
+  nav a {
+    color: red;
+    text-decoration: none;
+    font-size: 18px;
+    -moz-transform: scale(1.2);
+    margin-bottom: 16px;
+  }
+  nav a:hover {
+    color: red;
+  }
+  nav a span {
+    font-size: 16px;
+    color: green;
+  }
+}
+@media screen and (min-width: 1260px) { /*necessario replicat toda a árvore para mudar um elemento que está no fundo da hierarquia*/
+  nav a span {
+    color: purple;
+  }
+}/*# sourceMappingURL=style.css.map */
